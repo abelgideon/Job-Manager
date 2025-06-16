@@ -6,7 +6,6 @@ import { useState } from 'react'
 const Login = () => {
   const navigate = useNavigate()
   const [error, setError] = useState(false)
-  const [success, setSuccess] = useState(false)
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -15,7 +14,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:3000/api/v1/auth/login',
+        `${import.meta.env.VITE_BACKEND}/api/v1/auth/login`,
         dataObj
       )
       setError(false)
