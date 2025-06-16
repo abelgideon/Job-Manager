@@ -4,7 +4,7 @@ import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ProtectedRoutes from './pages/ProtectedRoutes'
-import UpdateTask from './pages/UpdateTask'
+import UpdateJob from './pages/UpdateJob'
 import NotFound from './pages/NotFound'
 
 const router = createBrowserRouter([
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     path: '/jobs/:id/edit',
     element: (
       <ProtectedRoutes>
-        <UpdateTask />
+        <UpdateJob />
       </ProtectedRoutes>
     ),
   },
